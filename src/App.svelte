@@ -1,4 +1,5 @@
 <script>
+  import CustomCount from "./components/CustomCount.svelte";
   import Decrement from "./components/Decrement.svelte";
   import Display from "./components/Display.svelte";
   import Increment from "./components/Increment.svelte";
@@ -12,7 +13,9 @@
   <Decrement />
   <Reset /> -->
 
-  <Timer />
+  <!-- <Timer /> -->
+
+  <CustomCount />
 </main>
 
 <style>
