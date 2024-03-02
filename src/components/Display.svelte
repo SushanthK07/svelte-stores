@@ -1,11 +1,16 @@
 <script>
+  import { onDestroy } from "svelte";
   import { state } from "../store/stores.js";
 
   let count;
 
-  state.subscribe((value) => {
+  const unsubscribe = state.subscribe((value) => {
     // console.log(value);
     count = value.count;
+  });
+
+  onDestroy(() => {
+    unsubscribe();
   });
 </script>
 
